@@ -1,15 +1,5 @@
 /* ############################ CSS POUR L'ACCUEIL ############################ */
 
-body {
-  background: rgb(248, 249, 250);
-}
-
-p {
-  padding: 1.5em;
-  width: 95%;
-  text-align: justify;
-}
-
 /* Configuration de la barre de recherche */
 .search-form {
   width: 50%;

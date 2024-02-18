@@ -1,8 +1,14 @@
 /* ############################ CSS POUR LE BODY ############################ */
 
+p {
+  padding: 1.2em;
+  width: 95%;
+  text-align: justify;
+}
+
 body
 {
-  background: white;
+  background: rgb(248, 249, 250);
   min-height: 100vh;
   display: flex;
   flex-direction:column;
