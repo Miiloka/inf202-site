@@ -4,6 +4,12 @@ body {
   background: rgb(248, 249, 250);
 }
 
+p {
+  padding: 1.5em;
+  width: 95%;
+  text-align: justify;
+}
+
 /* Configuration de la barre de recherche */
 .search-form {
   width: 50%;
@@ -121,7 +127,6 @@ body {
 }
 .card {
   background: rgb(235,235,235);
-  background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(218,219,222,1) 100%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -204,7 +209,8 @@ body {
   .column_img {
       float: left;
       width: 50%;
-      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       }
 
   .column {

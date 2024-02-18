@@ -7,8 +7,7 @@
   <title>Accueil</title>
   </head>
 
-  <body>
-
+  <body
   
   <!-- Barre de navigation -->
 
@@ -82,7 +81,7 @@
   <div class="column">
     <h1 style="font-size : 30px">KERATOCONE</h1>
     <p>Le kératocône est une maladie de l'œil qui affecte la forme et l'épaisseur de la cornée, la partie transparente à l'avant de l'œil. Normalement, la cornée a une forme arrondie, agissant comme une lentille pour diriger la lumière vers la rétine. Cependant, dans le cas du kératocône, la cornée s'amincit progressivement et prend une forme conique irrégulière, ce qui provoque une déformation de la vision.</p>
-    <h2>Caractéristiques</h2> 
+    <h3>Caractéristiques</h3> 
 <ol>
 <li>Amincissement de la cornée;</li>
 <li>Déformation de la forme;</li>
