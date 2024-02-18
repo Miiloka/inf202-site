@@ -1,0 +1,23 @@
+/* ############################ CSS POUR LA NAVBAR ############################ */
+
+.navbar-custom {
+  background: linear-gradient(36deg, rgba(245,245,245,1) 30%, rgba(225,225,225,1) 70%);
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
+  border: 1px solid #f0f0f0;
+}
+
+/* Menus accueil, cours et formules */
+.navbar-custom .navbar-nav .nav-link, .card, body {
+    color: #333; /* Couleur de texte plus sombre pour contraster avec le fond clair */
+}
+
+.nochange{
+  color : black ;
+}
+
+.nochange:hover{
+  color:black;
+}

@@ -1,0 +1,83 @@
+/* ############################ CSS POUR LES COURS ############################ */
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: justify;
+    padding: 20px;
+    width: 100%;
+}
+
+.conteneur h2{
+  text-align: center;
+}
+
+.courscontent{
+  background-color: white;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2%;
+  border-width: thin;
+  border-color : black;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin : 0px 1px 10px 1px;
+}
+
+.cours-cadre {
+  margin-bottom: 30px;
+}
+
+.cours-cadre__content-wrapper {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.cours-cadre__titre {
+  cursor: pointer;
+  text-align: center;
+  background-color: grey;
+  display: block;
+  font-size: 1.25em;
+  font-weight: 700;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 0;
+  transition: all 0.25s ease-out;
+  background: linear-gradient(to top, #D7DDE8, #757F9A);
+}
+
+.cours-cadre__titre::after {
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  display: inline-block;
+  float: right;
+  height: 10px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  transform: rotate(135deg);
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
+  width: 10px;
+}
+
+.cours-cadre__trigger:checked
+  + .cours-cadre__titre
+  + .cours-cadre__content-wrapper {
+  max-height: 2000px;
+}
+
+.cours-cadre__trigger:checked + .cours-cadre__titre::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

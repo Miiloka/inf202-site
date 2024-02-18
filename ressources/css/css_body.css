@@ -1,0 +1,9 @@
+/* ############################ CSS POUR LE BODY ############################ */
+
+body
+{
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction:column;
+}

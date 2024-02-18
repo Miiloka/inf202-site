@@ -1,0 +1,66 @@
+/* ############################ CSS POUR LA PAGE "STAFF" ############################ */
+
+/* Utiliser flexbox pour les lignes et les colonnes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* Ajouté pour assurer que tous les enfants de la ligne s'étendent à la même hauteur */
+  margin: auto;
+}
+
+/* Mise à jour de la configuration des colonnes */
+.column {
+  display: flex; /* Ajouté pour permettre aux cartes de s'étendre */
+  flex-direction: column; /* Organise le contenu de la colonne verticalement */
+  flex: 1; /* Chaque colonne peut s'étendre pour remplir l'espace disponible */
+  align-items: center; /* Centre les cartes horizontalement */
+  margin-bottom: 6px;
+  padding: 8px 8px;
+  min-width: 250px; /* Pour s'assurer que les colonnes ne deviennent pas trop petites */
+}
+
+/* Style des cartes */
+.card {
+  display: flex; /* Utiliser flex pour permettre le contenu de s'étendre */
+  flex-direction: column; /* Organise le contenu de la carte verticalement */
+  flex: 1; /* Permet à la carte de remplir l'espace vertical dans la colonne */
+  justify-content: space-between; /* Distribue l'espace verticalement dans la carte */
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,0.39539565826330536) 4%, rgba(212,199,181,1) 93%);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ajouté pour forcer la carte à occuper toute la largeur de la colonne */
+}
+
+/* Ajustements de l'espace dans le container */
+.container {
+  padding: 0 16px;
+}
+
+/* Suppression des espaces inutiles */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+/* Configuration du bouton */
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}

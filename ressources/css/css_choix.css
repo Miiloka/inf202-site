@@ -1,0 +1,44 @@
+/* ############################ CSS POUR LE "CHOIX" ############################ */
+
+.row{
+  justify-content: center;
+  margin: auto;
+}
+
+/* Ajout d'ombre et d'écart dans le card*/
+.card {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  padding:10px;
+}
+
+/* Configuration du bouton */
+.button {
+  border: none;
+  justify-content: center;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: purple;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Traitement des colonnes */
+.column {
+  text-align: center;
+  float: left;
+  width: 45%;
+}
+
+/* Suppression de l'espace inutile */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
