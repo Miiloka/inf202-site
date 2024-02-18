@@ -59,24 +59,24 @@
 
 <div class="row" style="padding:10px;">
   <div class="column">
-    <h1 style="font-size : 30px">KERATOCONE</h1>
+    <h1 style="font-size : 30px">Centre référence du kératocône</h1>
     <p>Le kératocône est une maladie de l'œil qui affecte la forme et l'épaisseur de la cornée, la partie transparente à l'avant de l'œil. Normalement, la cornée a une forme arrondie, agissant comme une lentille pour diriger la lumière vers la rétine. Cependant, dans le cas du kératocône, la cornée s'amincit progressivement et prend une forme conique irrégulière, ce qui provoque une déformation de la vision.</p>
-    <h3>Caractéristiques</h3> 
+    <h5>Caractéristiques</h5> 
 <ol>
 <li>Amincissement de la cornée</li>
-<li>Déformation de la forme</li>
+<li>Déformation de la cornée</li>
 <li>Astigmatisme</li> 
 <li>Troubles visuels</li> 
 </ol>
 </div>
   <div class="column_img">
-    <img src="ressources/images/eye.jpg" alt="Yeux" style="width: 50%; display: block; margin: 0 auto;">
+    <img src="ressources/images/eye.jpg" alt="Yeux" style="width: 70%; display: block; margin: 0 auto;">
   </div>
 </div>
 
 
 <div class="row" style="padding:10px;">
-  <h1>ENGAGEMENTS</h1>
+  <h1>Nos engagments</h1>
     <p>Nous nous investissons également dans l'accessibilité des soins oculaires pour tous, en nous assurant que nos services sont disponibles et adaptés aux besoins individuels. Nous accordons une grande importance à l'éducation des patients pour favoriser une compréhension approfondie de leur santé visuelle. De plus, nous mettons un accent particulier sur la prévention des affections oculaires à travers des campagnes de sensibilisation et des examens réguliers.</p>
 </div>
 
