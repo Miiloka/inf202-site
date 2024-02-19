@@ -1,9 +1,5 @@
 /* ############################ CSS POUR L'ACCUEIL ############################ */
 
-body {
-  background: rgb(248, 249, 250);
-}
-
 /* Configuration de la barre de recherche */
 .search-form {
   width: 50%;
@@ -203,7 +199,8 @@ body {
   .column_img {
       float: left;
       width: 50%;
-      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       }
 
   .column {
