@@ -28,8 +28,8 @@
         <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE2.jfif" alt="Maud Perpère" style="width:75%"></p>
         <div class="container">
           <h2>Maud Perpère</h2>
-          <p class="title">Dresseur pokemon</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p class="title">Cheffe de service</p>
+          <p>Professeure en ophtalmologie et spécialiste de la prise en charge du kératocône.</p>
           <p>exemple@exemple.com</p>
           <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
         </div>
@@ -41,9 +41,9 @@
         <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE3.jfif" alt="Léa Pasquet" style="width:75%"></p>
         <div class="container">
           <h2>Léa Pasquet</h2>
-          <p class="title">TRUC</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>exemple@exemple.com</p>
+          <p class="title">Ophtalmologue</p>
+          <p>Ophtalmologue depuis 10 ans. Spécialisée dans les consultations pédiatriques pour dépistage des troubles de la vision chez l'enfant de moins de 15 ans.</p>
+          <p>leapasquet15@gmail.com</p>
           <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
         </div>
       </div>
@@ -54,8 +54,8 @@
         <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE3.jfif" alt="Anne-Andrée" style="width:75%"></p>
         <div class="container">
           <h2>Anne-Andrée</h2>
-          <p class="title">BIDULE</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p class="title">Ophtalmologue</p>
+          <p>Ophtalmologue depuis 12 ans. Spécialisée dans le traitement des maladies oculaires telles que la cataracte, le glaucome et la dégénérescence maculaire.</p>
           <p>exemple@exemple.com</p>
           <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
         </div>
