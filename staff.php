@@ -44,7 +44,7 @@
           <p class="title">Ophtalmologue</p>
           <p>Ophtalmologue depuis 10 ans. Spécialisée dans les consultations pédiatriques pour dépistage des troubles de la vision chez l'enfant de moins de 15 ans.</p>
           <p>leapasquet15@gmail.com</p>
-          <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
+          <p><a href="mailto:leapasquet15@gmail.com"><button class="button">Contact</button></a></p>
         </div>
       </div>
     </div>
