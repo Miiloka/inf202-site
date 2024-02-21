@@ -14,7 +14,7 @@
               </div>
               <div class="col-md-6 px-4" style="text-align:justify">
                  <h6> A propos de nous</h6>
-                 <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque deserunt totam architecto cum ab illo obcaecati atque. Dolorum veniam nesciunt quod ex quidem voluptatem, saepe aut adipisci qui quos. Nobis.</p>
+                 <p> Le service d'ophtalmologie de l'hôpital permet la prise en charge complète des patients, du contrôle de routine aux chirurgies les plus complexes. Le service est spécialisé dans la prise en charge des kératocônes</p>
               </div>
            </div>
         </div>

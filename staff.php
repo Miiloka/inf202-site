@@ -29,9 +29,9 @@
         <div class="container">
           <h2>Maud Perpère</h2>
           <p class="title">Cheffe de service</p>
-          <p>Professeure en ophtalmologie et spécialiste de la prise en charge du kératocône.</p>
-          <p>exemple@exemple.com</p>
-          <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
+          <p>Professeure en ophtalmologie et spécialiste de la prise en charge du kératocône. Cheffe du service d'ophtalmologie depuis plus de 2018. </p>
+          <p>maud@gmail.com</p>
+          <p><a href="mailto:maud@gmail.com"><button class="button">Contact</button></a></p>
         </div>
       </div>
     </div>
@@ -56,8 +56,8 @@
           <h2>Anne-Andrée</h2>
           <p class="title">Ophtalmologue</p>
           <p>Ophtalmologue depuis 12 ans. Spécialisée dans le traitement des maladies oculaires telles que la cataracte, le glaucome et la dégénérescence maculaire.</p>
-          <p>exemple@exemple.com</p>
-          <p><a href="mailto:exemple@exemple.com"><button class="button">Contact</button></a></p>
+          <p>anneandree@gmail.com</p>
+          <p><a href="mailto:anneandree@gmail.com"><button class="button">Contact</button></a></p>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-stack"></i> Liste</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-stack"></i> Données du service</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
           				</li>
@@ -30,7 +30,7 @@
 
           <li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="page1.php"><i class="bi bi-wallet2"></i> Page</a>
+              <a class="nav-link" aria-current="page" href="formulaire_co_equipe.php"><i class="bi bi-wallet2"></i> Me connecter</a>
             </li>
 
             </ul>
