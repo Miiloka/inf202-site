@@ -1,4 +1,3 @@
-<!-- Pour utiliser le CSS Bootstrap -->
 
 <?php include "model/debutpage.php"; ?>
 
@@ -19,12 +18,12 @@
 // connexion  à la base de données
 include("connexion_base.php");
 
-// définition de la requête - les paramètres sont identifiés ; on n'a pas besoin de gérer les guillemets -
+// définition de la requête 
 $req = $pdo->prepare('select mdp from tab_equipe_service where user= :p_user');
-// exécution de la requête - les valeurs des paramètres sont données dans un tableau
+// exécution de la requête 
 $req->execute(array('p_user' => $_POST['utilisateur']));
 
-// Récupération des données de la première ligne de la requête
+// Récupération des
 $ligne = $req->fetch();
 
 if ($ligne)  
