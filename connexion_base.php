@@ -3,7 +3,7 @@
 $config_base['hote']        = "localhost";
 $config_base['utilisateur'] = "root";
 $config_base['motdepasse']  = "";   // si Wampserver, mettez "" ici
-$config_base['nom_base']    = "bdd_kc_etud";
+$config_base['nom_base']    = "aorue";
 
 
 

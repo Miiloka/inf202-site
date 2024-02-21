@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 fév. 2024 à 12:19
+-- Généré le : mer. 21 fév. 2024 à 07:15
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -2697,6 +2697,31 @@ INSERT INTO `tab_contacto` (`N° dossier`, `Date`, `Œil`, `Id_lentille`, `Autre
 ('468664', '2020-05-15 00:00:00', 2, 46, 'lentilles souples', 0, 0, 0, ''),
 ('491218', '2020-06-18 00:00:00', 1, 16, '', 7, 9, -2, ''),
 ('491218', '2020-06-18 00:00:00', 2, 46, 'Ex-Z', 8, 9, -3, '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tab_equipe_service`
+--
+
+DROP TABLE IF EXISTS `tab_equipe_service`;
+CREATE TABLE IF NOT EXISTS `tab_equipe_service` (
+  `nom` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
+  `prenom` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
+  `user` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
+  `mdp` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
+  `fonction` varchar(50) COLLATE utf8mb3_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+
+--
+-- Déchargement des données de la table `tab_equipe_service`
+--
+
+INSERT INTO `tab_equipe_service` (`nom`, `prenom`, `user`, `mdp`, `fonction`) VALUES
+('orue', 'adrien', 'aorue', 'aorue33.', 'recruteur'),
+('pasquet', 'lea', 'lpasquet', 'lpasquet15.', 'ophtalmologue'),
+('ruiz', 'anne-andree', 'aruiz', 'aruiz22.', 'ophtalmologue'),
+('perpere', 'maud', 'mperpere', 'mperpere18.', 'cheffe de service');
 
 -- --------------------------------------------------------
 
