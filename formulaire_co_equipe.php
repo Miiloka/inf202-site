@@ -13,7 +13,8 @@
 </head>
 <body>
 
-<form method="POST" action="connexion_equipe.php">
+<form method="POST" action="connexion_equipe.php" style=" width: 50vw; margin-left : 25vw;" >
+
 
 <fieldset><legend><h4> Identification du personnel de service </h4></legend>
 <table>
@@ -31,5 +32,4 @@
 <?php include "model/footer.php"; ?>
 
 </body>
-
 
