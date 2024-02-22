@@ -30,7 +30,7 @@ if ($ligne)
 {
  if ($ligne['mdp']==$_POST['motpasse']) 
    {   	echo '<p style="font-size: 18px; color:  #000000; font-weight: bold;">Votre authentification est correcte.</p>';
-		echo '<a href="formulaire_co_equipe.php" style="text-decoration: none; background-color: #77b5fe; color: white; padding: 10px 15px; border-radius: 30px; margin-top: 10px;">Accéder aux données patients</a>';;
+		echo '<a href="donnees_patients_accueil.php" style="text-decoration: none; background-color: #77b5fe; color: white; padding: 10px 15px; border-radius: 30px; margin-top: 10px;">Accéder aux données patients</a>';;
 		
    } else 	{ echo "Attention ",$_POST['utilisateur']," ! <br /> \n";
 			echo "Erreur de mot de passe <br /> ";
