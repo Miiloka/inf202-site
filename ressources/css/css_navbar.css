@@ -1,7 +1,7 @@
 /* ############################ CSS POUR LA NAVBAR ############################ */
 
-.navbar-custom {
-  background: linear-gradient(36deg, rgba(245,245,245,1) 30%, rgba(225,225,225,1) 40%);
+.navbar-custom{
+  background: rgb(49, 49, 49);
 }
 
 .card {
@@ -9,8 +9,11 @@
 }
 
 /* Menus accueil, cours et formules */
-.navbar-custom .navbar-nav .nav-link, .card, body {
-    color: #333; /* Couleur de texte plus sombre pour contraster avec le fond clair */
+.navbar-custom .navbar-nav .nav-link, .card {
+  color: #ffffff; /* Couleur de texte plus sombre pour contraster avec le fond clair */
+  font-size: 16px; /* Taille de texte plus grande */
+  margin-right: 20px; /* Espacement à droite */
+  
 }
 
 .nochange{

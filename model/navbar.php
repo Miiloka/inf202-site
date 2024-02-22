@@ -1,4 +1,3 @@
-
   <!-- Barre de navigation -->
 
   <header>

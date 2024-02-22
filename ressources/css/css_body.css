@@ -8,7 +8,7 @@ p {
 
 body
 {
-  background: rgb(248, 249, 250);
+  background: rgba(231, 229, 229, 0.733);
   min-height: 100vh;
   display: flex;
   flex-direction:column;
