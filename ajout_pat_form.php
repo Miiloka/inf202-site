@@ -23,4 +23,6 @@
 
 <!-- j'ai retiré le pied de page parce que lorsque je veux valider mon formulaire, ils m'obliger à entrer une adresse mail dans les news letters-->
 
+<?php include "model/footer.php"; ?>
+
 </body>
