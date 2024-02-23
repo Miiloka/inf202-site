@@ -13,29 +13,14 @@
 <?php
 include("connexion_base.php");
 
-$req = $pdo->prepare('SELECT tp.num_dossier, tp.nom, tp.pren FROM (tab_codage_chirurgie tcc INNER JOIN tab_chirurgie tc ON tcc.Code=tc.Code_chir) INNER JOIN tab_patient tp on tc.num_dossier=tp.num_dossier WHERE tcc.code = :p_code');
+// définition de la requête - les paramètres sont nommés ex : p_cen -
+$req = $pdo->prepare('SELECT count(*) as nb FROM (tab_codage_chirurgie tcc INNER JOIN tab_chirurgie tc ON tcc.Code=tc.Code_chir) INNER JOIN tab_patient tp on tc.num_dossier=tp.num_dossier WHERE tcc.code = :p_code');
+// exécution de la requête - les valeurs des paramètres sont données dans un tableau
 $req->execute(array('p_code' => $_POST['chir']));
-echo '<table>';
-
-$i=1; // cette variable indique le type de ligne à afficher : 1=ligne impaire, -1=ligne paire
-$res=$req->fetchAll();
-
-foreach ($res as $ligne)
-   {  //ajouter une ligne dans le tableau
-   	  if ($i==1) //début de ligne : ligne impaire
-		{ echo '<tr class="grisclair">';
-		} else //début de ligne : ligne paire
-		{ echo '<tr class="grisfonce">';
-		}
-		// affichage des valeurs des 3 champs ramenés par la requête pour la ligne en cours, chacun dans une cellule de cette ligne	
-	  for ($k=0;$k<=2;$k++)
-			{
-			echo '<td>',$ligne[$k], '</td>';
-			}
-			// fin de ligne
-	  echo "</tr> \n" ;
-	  $i=$i*(-1);	//pour changer de type de ligne à chaque passage dans la boucle, les valeurs de $i sont alternativement 1 et -1
-	}
+// Récupération des données de la requête ligne à ligne - dans ce cas, il n'y a qu'une ligne à extraire
+$ligne = $req->fetch();
+echo 'Il y a ', $ligne['nb'] ,' patients pour cette chirurgie. <br /><br /> \n";
+$req->closeCursor() ;
 echo "<a href='donnees_patients_accueil.php'> Retour </a> ";
 
 
