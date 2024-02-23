@@ -16,10 +16,8 @@
 <input name ="num" type="text"/></label>
 </fieldset>
 <input type="submit" name="val" value ="Valider"/>
-<<<<<<< Updated upstream
+
 </form>
-=======
->>>>>>> Stashed changes
 
 <?php include "model/footer.php"; ?>
 
