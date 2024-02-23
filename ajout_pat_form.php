@@ -16,6 +16,7 @@
 <input name ="num" type="text"/></label>
 </fieldset>
 <input type="submit" name="val" value ="Valider"/>
+
 </form>
 
 <?php include "model/footer.php"; ?>
