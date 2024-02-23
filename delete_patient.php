@@ -28,9 +28,8 @@ $ligne = $req->fetch();
 if ($ligne)  
 {
  if ($ligne['pren']==$_POST['prenom'] and $ligne['nom']==$_POST['nom'] and $ligne['num_dossier']==$_POST['dossier'] ) 
-   {   	echo "Le patient a bien été sorti du service <br /> \n";
-		
-   } else 	{ echo "Ce patient n'est pas enregistré dans le service. <br /> \n";
+   {   	echo "Le patient a bien été sorti du service";
+   } else 	{ echo "Ce patient n'est pas enregistré dans le service. \n";
    echo "<a href='delete_patient_form.php'> Retour </a> ";
    }
 }
@@ -41,3 +40,5 @@ if ($ligne)
 <?php include "model/footer.php"; ?>
 
 </body>
+
+
