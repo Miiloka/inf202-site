@@ -36,7 +36,7 @@
 
 
 <div class="row" style="padding:10px;">
-  <h1>Nos engagments</h1>
+  <h1>Nos engagements</h1>
     <p>Nous nous investissons également dans l'accessibilité des soins oculaires pour tous, en nous assurant que nos services sont disponibles et adaptés aux besoins individuels. Nous accordons une grande importance à l'éducation des patients pour favoriser une compréhension approfondie de leur santé visuelle. De plus, nous mettons un accent particulier sur la prévention des affections oculaires à travers des campagnes de sensibilisation et des examens réguliers.</p>
 </div>
 
