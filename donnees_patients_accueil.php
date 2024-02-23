@@ -26,7 +26,6 @@
 
 <form method = "POST" action="ajout_atcd_pers.php">
 	<fieldset><h4> Ajouter un antécédent personnel a un patient </h4>
-	<table>
 	<tr> <td> Numéro de dossier : </td><td><INPUT NAME="num_dossier" TYPE="text"/> </td></tr>
 	<tr> <td> Catégorie de l'antécédent : </td><td><INPUT NAME="Categorie_atcd" TYPE="text"/> </td></tr>
 	<tr> <td> Traitement actuel : </td><td><INPUT NAME="Traitement_act" TYPE="text"/> </td></tr>
