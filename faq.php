@@ -20,7 +20,7 @@
       <div class="faq-cadre__content-wrapper">
         <div class="faq-cadre__content">
           <p>
-            Il est recommandé de passer un examen de la vue tous les deux ans, même si vous ne pouvez présentez pas de symptômes. Cela permet de dépister les problèmes de vision au stade précoce.
+            Il est recommandé de passer un examen de la vue tous les deux ans, même si vous ne présentez pas de symptômes. Cela permet de dépister les problèmes de vision au stade précoce.
           </p>
         </div>
       </div>
