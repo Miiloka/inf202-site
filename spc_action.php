@@ -19,7 +19,7 @@ $req = $pdo->prepare('SELECT count(*) as nb FROM (tab_codage_chirurgie tcc INNER
 $req->execute(array('p_code' => $_POST['chir']));
 // Récupération des données de la requête ligne à ligne - dans ce cas, il n'y a qu'une ligne à extraire
 $ligne = $req->fetch();
-echo 'Il y a ', $ligne['nb'] ,' patients pour cette chirurgie. <br /><br /> \n';
+echo 'Il y a ', $ligne['nb'] ,' patients pour cette chirurgie. <br /><br />';
 $req->closeCursor() ;
 echo "<a href='donnees_patients_accueil.php'> Retour </a> ";
 
