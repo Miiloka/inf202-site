@@ -10,7 +10,7 @@
 </head>
 
 <form method ="POST" action="spc_action.php">
-<fieldset><legend><h4>Sélectionnés un type de chirurgie</h4></legend>
+<fieldset><legend><h4>Sélectionner un type de chirurgie</h4></legend>
 <label> Chirurgie : <select name="chir">
 				<option value="1">UV thérapie (CXL)</option>
 				<option value="2">Anneaux Intra Cornéens (AIC)</option>
@@ -23,6 +23,6 @@
 </fieldset>
 <input type="submit" name="val" value ="Valider"/>
 
-<!-- j'ai retiré le pied de page parce que lorsque je veux valider mon formulaire, ils m'obliger à entrer une adresse mail dans les news letters-->
+<!-- j'ai retiré le pied de page parce que lorsque je veux valider mon formulaire, il m'oblige à entrer une adresse mail dans les newsletters-->
 
 </body>

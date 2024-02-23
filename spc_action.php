@@ -9,7 +9,6 @@
 <meta charset="utf-8" />	
 </head>
 
-<!-- modification de la variable N° dossier en num_dossier dans tab_chirurgie pour faire fonctionner la requête-->
 <?php
 include("connexion_base.php");
 
@@ -21,7 +20,7 @@ $req->execute(array('p_code' => $_POST['chir']));
 $ligne = $req->fetch();
 echo 'Il y a ', $ligne['nb'] ,' patients pour cette chirurgie. <br /><br />';
 $req->closeCursor() ;
-echo "<a href='donnees_patients_accueil.php'> Retour </a> ";
+echo "<a href='donnees_service.php'> Retour </a> ";
 
 ?>
 
