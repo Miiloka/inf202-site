@@ -2,15 +2,10 @@
 
 <?php include "model/debutpage.php"; ?>
 
-	
-		<meta charset="utf-8" />	
-		<title>Identification</title>
-</head>
 
-<body>
+		<title>Identification</title>
 
 <?php include "model/navbar.php"; ?>
-<br />
   <style>
        
         body {
@@ -44,7 +39,7 @@
     </style>
 
 
-<div style="max-width: 500px;"> 
+<div style="max-width: 500px; margin:2em;"> 
   
 	<form method="POST" action="connexion_equipe.php" style=" width: 50vw; margin-left : 25vw;" >
 	
@@ -60,7 +55,6 @@
 		</form>
 </div>
 
-<br />
 </body>
 
 

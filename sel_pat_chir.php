@@ -1,13 +1,11 @@
-<!-- codé par Anne-Andrée -->
+<!-- Codé par Anne-Andrée -->
 
 <?php include "model/debutpage.php"; ?>
 
 <title>Sélection des patients selon le type de chirurgie</title>
+
 <body>
 <?php include "model/navbar.php"; ?>
-<head>
-<meta charset="utf-8" />	
-</head>
 
 <form method ="POST" action="spc_action.php">
 <fieldset><legend><h4>Sélectionner un type de chirurgie</h4></legend>
@@ -22,7 +20,9 @@
 			   </select> </label> <br />
 </fieldset>
 <input type="submit" name="val" value ="Valider"/>
+</form>
 
-<!-- j'ai retiré le pied de page parce que lorsque je veux valider mon formulaire, il m'oblige à entrer une adresse mail dans les newsletters-->
+<?php include "model/footer.php"; ?>
+
 
 </body>
