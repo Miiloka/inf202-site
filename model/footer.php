@@ -42,7 +42,7 @@
                  <h6> Newsletter</h6>
                  <form class="form-footer my-3">
                     <input type="email" placeholder="Entrez votre mail..." name="search" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                    <input type="button" name = "news" value="S'inscrire" >
+                    <input type="button" value="S'inscrire" >
                  </form>
               </div>
            </div>

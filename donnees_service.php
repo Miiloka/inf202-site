@@ -2,17 +2,18 @@
 
 <?php include "model/debutpage.php"; ?>
 
-<title>Modele</title>
+<title>Données de service</title>
 
 </head>
 
 <body>
-
 <?php include "model/navbar.php"; ?>
 
-<form method ="POST" action="sel_pat_chir.php">
-<input type="submit" name="ajout" value ="Nombre de patients par type de chirurgie"/>
-</form>
+<div style="display: flex; justify-content: center; align-items: center; ">
+    <form method="POST" action="sel_pat_chir.php">
+        <input type="submit" name="ajout" value="Nombre de patients par type de chirurgie" />
+    </form>
+</div>
 
 <?php include "model/footer.php"; ?>
 
