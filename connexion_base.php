@@ -2,7 +2,7 @@
 // définition des paramètres de connexion à la base de données
 $config_base['hote']        = "localhost";
 $config_base['utilisateur'] = "root";
-$config_base['motdepasse']  = "root";   // si Wampserver, mettez "" ici
+$config_base['motdepasse']  = "";   // si Wampserver, mettez "" ici
 $config_base['nom_base']    = "aorue";
 
 

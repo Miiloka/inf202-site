@@ -23,10 +23,10 @@ $ligne = $req->fetch();
 
 // Vérification du nombre de lignes affectées par la requête
 if ($req->rowCount() > 0) {
-  echo "Le patient a bien été sorti du service";
+  echo '<p style="font-size: 18px; color:  #000000; font-weight: bold;width: 50vw; margin-left : 25vw;">Le patient ayant comme numéro de dossier : '.htmlspecialchars($_POST["dossier"]).' est bien supprimé de la base informatique du service</p>';
 } else {
-  echo "Ce patient n'est pas enregistré dans le service.";
-  echo "<a href='delete_patient_form.php'> Retour </a> ";
+  echo "<p style='font-size: 18px; color:  #000000; font-weight: bold;width: 50vw; margin-left : 25vw;'>Ce patient n'est pas référencé dans le service.</p>";
+  echo '<a href="delete_patient_form.php" style="text-decoration: none; background-color: #77b5fe; color: white; padding: 10px 15px;border-radius: 30px; margin-top: 10px;width: 50vw; margin-left : 25vw;">Nouvel essai</a>';
 }
 ?>
 
