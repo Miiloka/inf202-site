@@ -34,7 +34,6 @@
                        <ul>
                          <li> <a href="staff.php"> L'équipe</a> </li>
                          <li> <a href="contact.php"> Contact</a> </li>
-                         <li> <a href="cgu.php"> CGV/CGU</a> </li>
                        </ul>
                     </div>
                  </div>

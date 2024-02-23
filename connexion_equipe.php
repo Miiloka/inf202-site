@@ -1,7 +1,6 @@
-
 <?php include "model/debutpage.php"; ?>
 
-<title>Connexion equipe</title>
+<title>Connexion équipe</title>
 
 </head>
 
@@ -9,10 +8,6 @@
 
 <?php include "model/navbar.php"; ?>
 
-	<head>
-		<meta charset="utf-8" />	
-</head>
-<body>
 <?php
 
 // connexion  à la base de données
@@ -41,7 +36,6 @@ if ($ligne)
 		};
 
 ?>
-</body>
 
 
 <?php include "model/footer.php"; ?>
