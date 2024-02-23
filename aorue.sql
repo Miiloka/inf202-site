@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : mer. 21 fév. 2024 à 07:15
--- Version du serveur : 8.2.0
--- Version de PHP : 8.2.13
+-- Hôte : 127.0.0.1
+-- Généré le :  ven. 23 fév. 2024 à 10:55
+-- Version du serveur :  5.7.17
+-- Version de PHP :  5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `aorue`
+-- Base de données :  `aorue`
 --
 
 -- --------------------------------------------------------
@@ -27,19 +28,15 @@ SET time_zone = "+00:00";
 -- Structure de la table `tab_atcdperso`
 --
 
-DROP TABLE IF EXISTS `tab_atcdperso`;
-CREATE TABLE IF NOT EXISTS `tab_atcdperso` (
-  `ID_ATCD` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tab_atcdperso` (
+  `ID_ATCD` int(11) NOT NULL,
   `Num_dossier` varchar(255) DEFAULT NULL,
   `Categorie_atcd` double DEFAULT NULL,
   `Num_Type` double DEFAULT NULL,
   `Autre_ATCD` varchar(255) DEFAULT NULL,
-  `Traitement_act` int DEFAULT NULL,
-  `Traitement_passe` int DEFAULT NULL,
-  PRIMARY KEY (`ID_ATCD`),
-  KEY `Num_dossier` (`Num_dossier`),
-  KEY `Num_Type` (`Num_Type`)
-) ENGINE=InnoDB AUTO_INCREMENT=944 DEFAULT CHARSET=utf8mb3;
+  `Traitement_act` int(11) DEFAULT NULL,
+  `Traitement_passe` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_atcdperso`
@@ -947,17 +944,12 @@ INSERT INTO `tab_atcdperso` (`ID_ATCD`, `Num_dossier`, `Categorie_atcd`, `Num_Ty
 -- Structure de la table `tab_atcd_famil`
 --
 
-DROP TABLE IF EXISTS `tab_atcd_famil`;
-CREATE TABLE IF NOT EXISTS `tab_atcd_famil` (
-  `Id_ATCD fam` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tab_atcd_famil` (
+  `Id_ATCD fam` int(11) NOT NULL,
   `Num_dossier` varchar(255) DEFAULT NULL,
   `Code_ATCD_fam` double DEFAULT NULL,
-  `Codage parente` double DEFAULT NULL,
-  PRIMARY KEY (`Id_ATCD fam`),
-  KEY `Code_ATCD_fam` (`Code_ATCD_fam`),
-  KEY `Num_dossier` (`Num_dossier`),
-  KEY `TAB_Codage_parenteTAB_ATCD_famil` (`Codage parente`)
-) ENGINE=InnoDB AUTO_INCREMENT=323 DEFAULT CHARSET=utf8mb3;
+  `Codage parente` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_atcd_famil`
@@ -1272,25 +1264,21 @@ INSERT INTO `tab_atcd_famil` (`Id_ATCD fam`, `Num_dossier`, `Code_ATCD_fam`, `Co
 -- Structure de la table `tab_chirurgie`
 --
 
-DROP TABLE IF EXISTS `tab_chirurgie`;
-CREATE TABLE IF NOT EXISTS `tab_chirurgie` (
-  `ID_Chirurgie` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tab_chirurgie` (
+  `ID_Chirurgie` int(11) NOT NULL,
   `Œil` double NOT NULL,
-  `N° dossier` varchar(255) DEFAULT NULL,
+  `Num_dossier` varchar(255) DEFAULT NULL,
   `Code_chir` double DEFAULT NULL,
   `Autre_type_chir` varchar(255) DEFAULT NULL,
   `Date de la chirurgie` datetime DEFAULT NULL,
-  `Chirurgie - Commentaires` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID_Chirurgie`),
-  KEY `Code_chir` (`Code_chir`),
-  KEY `N° dossier` (`N° dossier`)
-) ENGINE=InnoDB AUTO_INCREMENT=610 DEFAULT CHARSET=utf8mb3;
+  `Chirurgie - Commentaires` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_chirurgie`
 --
 
-INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Œil`, `N° dossier`, `Code_chir`, `Autre_type_chir`, `Date de la chirurgie`, `Chirurgie - Commentaires`) VALUES
+INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Œil`, `Num_dossier`, `Code_chir`, `Autre_type_chir`, `Date de la chirurgie`, `Chirurgie - Commentaires`) VALUES
 (1, 1, '106202', 1, '', '2017-10-02 00:00:00', ''),
 (2, 1, '02.08615', 1, '', '2017-06-26 00:00:00', ''),
 (3, 1, '03.1341', 1, '', '2017-06-26 00:00:00', ''),
@@ -1872,13 +1860,10 @@ INSERT INTO `tab_chirurgie` (`ID_Chirurgie`, `Œil`, `N° dossier`, `Code_chir`,
 -- Structure de la table `tab_codage_adaptation`
 --
 
-DROP TABLE IF EXISTS `tab_codage_adaptation`;
-CREATE TABLE IF NOT EXISTS `tab_codage_adaptation` (
-  `Code_CS_Adaptation` int NOT NULL,
-  `Type_CS_Adaptation` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Code_CS_Adaptation`),
-  KEY `Code_CS_Contacto` (`Code_CS_Adaptation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `tab_codage_adaptation` (
+  `Code_CS_Adaptation` int(11) NOT NULL,
+  `Type_CS_Adaptation` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_adaptation`
@@ -1895,13 +1880,10 @@ INSERT INTO `tab_codage_adaptation` (`Code_CS_Adaptation`, `Type_CS_Adaptation`)
 -- Structure de la table `tab_codage_adressage`
 --
 
-DROP TABLE IF EXISTS `tab_codage_adressage`;
-CREATE TABLE IF NOT EXISTS `tab_codage_adressage` (
+CREATE TABLE `tab_codage_adressage` (
   `Codage` double NOT NULL,
-  `Adressage` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Codage`),
-  KEY `TAB_Codage_adressageAdressage` (`Adressage`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Adressage` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_adressage`
@@ -1918,14 +1900,11 @@ INSERT INTO `tab_codage_adressage` (`Codage`, `Adressage`) VALUES
 -- Structure de la table `tab_codage_atcd`
 --
 
-DROP TABLE IF EXISTS `tab_codage_atcd`;
-CREATE TABLE IF NOT EXISTS `tab_codage_atcd` (
-  `Num_atcd` double NOT NULL AUTO_INCREMENT,
-  `ID_Categorie_ATCD` int DEFAULT NULL,
-  `Type ATCD` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Num_atcd`),
-  KEY `TAB_Codage_CatATCDTAB_Codage_ATCD` (`ID_Categorie_ATCD`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `tab_codage_atcd` (
+  `Num_atcd` double NOT NULL,
+  `ID_Categorie_ATCD` int(11) DEFAULT NULL,
+  `Type ATCD` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_atcd`
@@ -1955,12 +1934,10 @@ INSERT INTO `tab_codage_atcd` (`Num_atcd`, `ID_Categorie_ATCD`, `Type ATCD`) VAL
 -- Structure de la table `tab_codage_atcd_famil`
 --
 
-DROP TABLE IF EXISTS `tab_codage_atcd_famil`;
-CREATE TABLE IF NOT EXISTS `tab_codage_atcd_famil` (
+CREATE TABLE `tab_codage_atcd_famil` (
   `Code` double NOT NULL,
-  `ATCD_familier` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `ATCD_familier` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_atcd_famil`
@@ -1979,12 +1956,10 @@ INSERT INTO `tab_codage_atcd_famil` (`Code`, `ATCD_familier`) VALUES
 -- Structure de la table `tab_codage_catatcd`
 --
 
-DROP TABLE IF EXISTS `tab_codage_catatcd`;
-CREATE TABLE IF NOT EXISTS `tab_codage_catatcd` (
-  `ID_categorie_ATCD` int NOT NULL,
-  `Categorie_ATCD` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`ID_categorie_ATCD`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `tab_codage_catatcd` (
+  `ID_categorie_ATCD` int(11) NOT NULL,
+  `Categorie_ATCD` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_catatcd`
@@ -2000,12 +1975,10 @@ INSERT INTO `tab_codage_catatcd` (`ID_categorie_ATCD`, `Categorie_ATCD`) VALUES
 -- Structure de la table `tab_codage_chirurgie`
 --
 
-DROP TABLE IF EXISTS `tab_codage_chirurgie`;
-CREATE TABLE IF NOT EXISTS `tab_codage_chirurgie` (
+CREATE TABLE `tab_codage_chirurgie` (
   `Code` double NOT NULL,
-  `Chirurgie` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Chirurgie` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_chirurgie`
@@ -2026,13 +1999,10 @@ INSERT INTO `tab_codage_chirurgie` (`Code`, `Chirurgie`) VALUES
 -- Structure de la table `tab_codage_csp`
 --
 
-DROP TABLE IF EXISTS `tab_codage_csp`;
-CREATE TABLE IF NOT EXISTS `tab_codage_csp` (
+CREATE TABLE `tab_codage_csp` (
   `Code` double NOT NULL,
-  `CSP` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Code`),
-  KEY `TAB_Codage_CSPCSP` (`CSP`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `CSP` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_csp`
@@ -2054,13 +2024,10 @@ INSERT INTO `tab_codage_csp` (`Code`, `CSP`) VALUES
 -- Structure de la table `tab_codage_ethnie`
 --
 
-DROP TABLE IF EXISTS `tab_codage_ethnie`;
-CREATE TABLE IF NOT EXISTS `tab_codage_ethnie` (
+CREATE TABLE `tab_codage_ethnie` (
   `Code_ethnie` double NOT NULL,
-  `Ethnie` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Code_ethnie`),
-  KEY `TAB_Codage_EthnieEthnie` (`Ethnie`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Ethnie` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_ethnie`
@@ -2079,13 +2046,10 @@ INSERT INTO `tab_codage_ethnie` (`Code_ethnie`, `Ethnie`) VALUES
 -- Structure de la table `tab_codage_frottement_oculaire`
 --
 
-DROP TABLE IF EXISTS `tab_codage_frottement_oculaire`;
-CREATE TABLE IF NOT EXISTS `tab_codage_frottement_oculaire` (
-  `Code_Frottement` int NOT NULL,
-  `Frottement_oculaire` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Code_Frottement`),
-  KEY `Code_Frottement` (`Code_Frottement`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `tab_codage_frottement_oculaire` (
+  `Code_Frottement` int(11) NOT NULL,
+  `Frottement_oculaire` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_frottement_oculaire`
@@ -2104,13 +2068,10 @@ INSERT INTO `tab_codage_frottement_oculaire` (`Code_Frottement`, `Frottement_ocu
 -- Structure de la table `tab_codage_lateralite_manuelle`
 --
 
-DROP TABLE IF EXISTS `tab_codage_lateralite_manuelle`;
-CREATE TABLE IF NOT EXISTS `tab_codage_lateralite_manuelle` (
+CREATE TABLE `tab_codage_lateralite_manuelle` (
   `Code-Lateralite` double NOT NULL,
-  `Lateralite` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Code-Lateralite`),
-  KEY `Code-Lateralite` (`Code-Lateralite`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Lateralite` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_lateralite_manuelle`
@@ -2127,16 +2088,13 @@ INSERT INTO `tab_codage_lateralite_manuelle` (`Code-Lateralite`, `Lateralite`) V
 -- Structure de la table `tab_codage_nom_lentilles`
 --
 
-DROP TABLE IF EXISTS `tab_codage_nom_lentilles`;
-CREATE TABLE IF NOT EXISTS `tab_codage_nom_lentilles` (
-  `Id_lentille` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tab_codage_nom_lentilles` (
+  `Id_lentille` int(11) NOT NULL,
   `Nom_lentille` varchar(50) DEFAULT NULL,
   `Laboratoire` varchar(50) DEFAULT NULL,
   `Type_Lentille` varchar(50) DEFAULT NULL,
-  `Geometrie_lentille` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Id_lentille`),
-  KEY `Num_auto1` (`Id_lentille`)
-) ENGINE=InnoDB AUTO_INCREMENT=1234 DEFAULT CHARSET=utf8mb3;
+  `Geometrie_lentille` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_nom_lentilles`
@@ -2208,12 +2166,10 @@ INSERT INTO `tab_codage_nom_lentilles` (`Id_lentille`, `Nom_lentille`, `Laborato
 -- Structure de la table `tab_codage_parente`
 --
 
-DROP TABLE IF EXISTS `tab_codage_parente`;
-CREATE TABLE IF NOT EXISTS `tab_codage_parente` (
+CREATE TABLE `tab_codage_parente` (
   `Code` double NOT NULL,
-  `Parente` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Parente` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_parente`
@@ -2234,12 +2190,10 @@ INSERT INTO `tab_codage_parente` (`Code`, `Parente`) VALUES
 -- Structure de la table `tab_codage_suivi`
 --
 
-DROP TABLE IF EXISTS `tab_codage_suivi`;
-CREATE TABLE IF NOT EXISTS `tab_codage_suivi` (
-  `ID_CS_Suivi` int NOT NULL,
-  `Type_CS` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`ID_CS_Suivi`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `tab_codage_suivi` (
+  `ID_CS_Suivi` int(11) NOT NULL,
+  `Type_CS` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_suivi`
@@ -2256,12 +2210,10 @@ INSERT INTO `tab_codage_suivi` (`ID_CS_Suivi`, `Type_CS`) VALUES
 -- Structure de la table `tab_codage_type_consultation`
 --
 
-DROP TABLE IF EXISTS `tab_codage_type_consultation`;
-CREATE TABLE IF NOT EXISTS `tab_codage_type_consultation` (
+CREATE TABLE `tab_codage_type_consultation` (
   `Codage` double NOT NULL,
-  `Type_consultation` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`Codage`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Type_consultation` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_codage_type_consultation`
@@ -2278,21 +2230,17 @@ INSERT INTO `tab_codage_type_consultation` (`Codage`, `Type_consultation`) VALUE
 -- Structure de la table `tab_contacto`
 --
 
-DROP TABLE IF EXISTS `tab_contacto`;
-CREATE TABLE IF NOT EXISTS `tab_contacto` (
+CREATE TABLE `tab_contacto` (
   `N° dossier` varchar(255) NOT NULL,
   `Date` datetime NOT NULL,
   `Œil` double NOT NULL,
-  `Id_lentille` int DEFAULT NULL,
+  `Id_lentille` int(11) DEFAULT NULL,
   `Autre_nom_lentille` varchar(50) DEFAULT NULL,
   `Ro` double DEFAULT NULL,
   `Diamètre` double DEFAULT NULL,
   `Puissance` double DEFAULT NULL,
-  `Commentaires` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`N° dossier`,`Date`,`Œil`),
-  KEY `N° dossier` (`N° dossier`),
-  KEY `TAB_Nom_lentillesTAB_contacto` (`Id_lentille`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Commentaires` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_contacto`
@@ -2704,14 +2652,13 @@ INSERT INTO `tab_contacto` (`N° dossier`, `Date`, `Œil`, `Id_lentille`, `Autre
 -- Structure de la table `tab_equipe_service`
 --
 
-DROP TABLE IF EXISTS `tab_equipe_service`;
-CREATE TABLE IF NOT EXISTS `tab_equipe_service` (
-  `nom` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
-  `prenom` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
-  `user` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
-  `mdp` varchar(50) COLLATE utf8mb3_bin DEFAULT NULL,
-  `fonction` varchar(50) COLLATE utf8mb3_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+CREATE TABLE `tab_equipe_service` (
+  `nom` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `prenom` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `user` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `mdp` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `fonction` varchar(50) COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `tab_equipe_service`
@@ -2729,14 +2676,11 @@ INSERT INTO `tab_equipe_service` (`nom`, `prenom`, `user`, `mdp`, `fonction`) VA
 -- Structure de la table `tab_grossesse`
 --
 
-DROP TABLE IF EXISTS `tab_grossesse`;
-CREATE TABLE IF NOT EXISTS `tab_grossesse` (
+CREATE TABLE `tab_grossesse` (
   `Num_Dossier` varchar(255) NOT NULL,
   `Id-Grossesse` double NOT NULL,
-  `Année` double DEFAULT NULL,
-  PRIMARY KEY (`Num_Dossier`,`Id-Grossesse`),
-  KEY `Num_Dossier` (`Num_Dossier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Année` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_grossesse`
@@ -2861,8 +2805,7 @@ INSERT INTO `tab_grossesse` (`Num_Dossier`, `Id-Grossesse`, `Année`) VALUES
 -- Structure de la table `tab_patient`
 --
 
-DROP TABLE IF EXISTS `tab_patient`;
-CREATE TABLE IF NOT EXISTS `tab_patient` (
+CREATE TABLE `tab_patient` (
   `Num_dossier` varchar(255) NOT NULL,
   `Date_debut_suivi` datetime NOT NULL,
   `Nom` varchar(255) DEFAULT NULL,
@@ -2876,19 +2819,13 @@ CREATE TABLE IF NOT EXISTS `tab_patient` (
   `Com_ou_Pays_nais` varchar(255) DEFAULT NULL,
   `Annee_dec_KC` double DEFAULT NULL,
   `Lat_man` double DEFAULT NULL,
-  `Tabagisme_actif` int DEFAULT NULL,
-  `nb_cig_jr` int DEFAULT NULL,
-  `Nb_annees` int DEFAULT NULL,
-  `Tabagisme_passif` int DEFAULT NULL,
-  `Situation_init_KC_OD` int DEFAULT NULL,
-  `Situation_init_KC_OG` int DEFAULT NULL,
-  PRIMARY KEY (`Num_dossier`),
-  KEY `TAB_Codage_adressageTAB_patient` (`Adressage`),
-  KEY `TAB_Codage_CSPTAB_patient` (`CSP`),
-  KEY `TAB_Codage_EthnieTAB_patient` (`Ethnie`),
-  KEY `TAB_Codage_Lateralite_manuelleTAB_patient` (`Lat_man`),
-  KEY `TAB_Codage_Type_ConsultationTAB_patient` (`Typ_consul`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `Tabagisme_actif` int(11) DEFAULT NULL,
+  `nb_cig_jr` int(11) DEFAULT NULL,
+  `Nb_annees` int(11) DEFAULT NULL,
+  `Tabagisme_passif` int(11) DEFAULT NULL,
+  `Situation_init_KC_OD` int(11) DEFAULT NULL,
+  `Situation_init_KC_OG` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_patient`
@@ -3901,33 +3838,27 @@ INSERT INTO `tab_patient` (`Num_dossier`, `Date_debut_suivi`, `Nom`, `Pren`, `Ad
 -- Structure de la table `tab_suivi`
 --
 
-DROP TABLE IF EXISTS `tab_suivi`;
-CREATE TABLE IF NOT EXISTS `tab_suivi` (
-  `ID_suivi` int NOT NULL AUTO_INCREMENT,
-  `Type_consult` int DEFAULT NULL,
+CREATE TABLE `tab_suivi` (
+  `ID_suivi` int(11) NOT NULL,
+  `Type_consult` int(11) DEFAULT NULL,
   `N° dossier` varchar(255) NOT NULL,
   `Date` datetime NOT NULL,
   `Signes Fonctionnels - détails` varchar(255) DEFAULT NULL,
-  `BAVrapide` int DEFAULT NULL,
-  `BAVlente` int DEFAULT NULL,
-  `Halos_noct` int DEFAULT NULL,
-  `Photophobie` int DEFAULT NULL,
-  `Vision_ddblee` int DEFAULT NULL,
-  `Rougeurs_ocul` int DEFAULT NULL,
-  `Autre` int DEFAULT NULL,
+  `BAVrapide` int(11) DEFAULT NULL,
+  `BAVlente` int(11) DEFAULT NULL,
+  `Halos_noct` int(11) DEFAULT NULL,
+  `Photophobie` int(11) DEFAULT NULL,
+  `Vision_ddblee` int(11) DEFAULT NULL,
+  `Rougeurs_ocul` int(11) DEFAULT NULL,
+  `Autre` int(11) DEFAULT NULL,
   `Autre_det` varchar(255) DEFAULT NULL,
-  `Frottement_yeux` int DEFAULT NULL,
-  `Port_lentille` int DEFAULT NULL,
-  `Adaptation_lentille` int DEFAULT NULL,
-  `Tolérance` int DEFAULT NULL,
-  `Nb_hrL_jr` int DEFAULT NULL,
-  `Nb_jrL_sem` int DEFAULT NULL,
-  PRIMARY KEY (`ID_suivi`),
-  KEY `N° dossier` (`N° dossier`),
-  KEY `TAB_Codage_Adaptation_ContactoTAB_Suivi` (`Adaptation_lentille`),
-  KEY `TAB_Codage_Frottement_oculaireTAB_Suivi` (`Frottement_yeux`),
-  KEY `TAB_Codage_SuiviTAB_Suivi` (`Type_consult`)
-) ENGINE=InnoDB AUTO_INCREMENT=2154 DEFAULT CHARSET=utf8mb3;
+  `Frottement_yeux` int(11) DEFAULT NULL,
+  `Port_lentille` int(11) DEFAULT NULL,
+  `Adaptation_lentille` int(11) DEFAULT NULL,
+  `Tolérance` int(11) DEFAULT NULL,
+  `Nb_hrL_jr` int(11) DEFAULT NULL,
+  `Nb_jrL_sem` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tab_suivi`
@@ -5919,6 +5850,197 @@ INSERT INTO `tab_suivi` (`ID_suivi`, `Type_consult`, `N° dossier`, `Date`, `Sig
 (2151, 1, '412491', '2020-06-11 00:00:00', '', 0, -1, -1, -1, -1, 0, -1, 'BAV suite décollement rétinien ++, images déformées ODG, anisométropie', 0, 1, 0, 1, 24, 7),
 (2153, 0, '483405', '2018-09-07 00:00:00', '', 0, -1, -1, -1, 0, 0, -1, 'céphalée', 0, 0, 0, 0, 0, 0);
 
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `tab_atcdperso`
+--
+ALTER TABLE `tab_atcdperso`
+  ADD PRIMARY KEY (`ID_ATCD`),
+  ADD KEY `Num_dossier` (`Num_dossier`),
+  ADD KEY `Num_Type` (`Num_Type`);
+
+--
+-- Index pour la table `tab_atcd_famil`
+--
+ALTER TABLE `tab_atcd_famil`
+  ADD PRIMARY KEY (`Id_ATCD fam`),
+  ADD KEY `Code_ATCD_fam` (`Code_ATCD_fam`),
+  ADD KEY `Num_dossier` (`Num_dossier`),
+  ADD KEY `TAB_Codage_parenteTAB_ATCD_famil` (`Codage parente`);
+
+--
+-- Index pour la table `tab_chirurgie`
+--
+ALTER TABLE `tab_chirurgie`
+  ADD PRIMARY KEY (`ID_Chirurgie`),
+  ADD KEY `Code_chir` (`Code_chir`),
+  ADD KEY `N° dossier` (`Num_dossier`);
+
+--
+-- Index pour la table `tab_codage_adaptation`
+--
+ALTER TABLE `tab_codage_adaptation`
+  ADD PRIMARY KEY (`Code_CS_Adaptation`),
+  ADD KEY `Code_CS_Contacto` (`Code_CS_Adaptation`);
+
+--
+-- Index pour la table `tab_codage_adressage`
+--
+ALTER TABLE `tab_codage_adressage`
+  ADD PRIMARY KEY (`Codage`),
+  ADD KEY `TAB_Codage_adressageAdressage` (`Adressage`);
+
+--
+-- Index pour la table `tab_codage_atcd`
+--
+ALTER TABLE `tab_codage_atcd`
+  ADD PRIMARY KEY (`Num_atcd`),
+  ADD KEY `TAB_Codage_CatATCDTAB_Codage_ATCD` (`ID_Categorie_ATCD`);
+
+--
+-- Index pour la table `tab_codage_atcd_famil`
+--
+ALTER TABLE `tab_codage_atcd_famil`
+  ADD PRIMARY KEY (`Code`);
+
+--
+-- Index pour la table `tab_codage_catatcd`
+--
+ALTER TABLE `tab_codage_catatcd`
+  ADD PRIMARY KEY (`ID_categorie_ATCD`);
+
+--
+-- Index pour la table `tab_codage_chirurgie`
+--
+ALTER TABLE `tab_codage_chirurgie`
+  ADD PRIMARY KEY (`Code`);
+
+--
+-- Index pour la table `tab_codage_csp`
+--
+ALTER TABLE `tab_codage_csp`
+  ADD PRIMARY KEY (`Code`),
+  ADD KEY `TAB_Codage_CSPCSP` (`CSP`);
+
+--
+-- Index pour la table `tab_codage_ethnie`
+--
+ALTER TABLE `tab_codage_ethnie`
+  ADD PRIMARY KEY (`Code_ethnie`),
+  ADD KEY `TAB_Codage_EthnieEthnie` (`Ethnie`);
+
+--
+-- Index pour la table `tab_codage_frottement_oculaire`
+--
+ALTER TABLE `tab_codage_frottement_oculaire`
+  ADD PRIMARY KEY (`Code_Frottement`),
+  ADD KEY `Code_Frottement` (`Code_Frottement`);
+
+--
+-- Index pour la table `tab_codage_lateralite_manuelle`
+--
+ALTER TABLE `tab_codage_lateralite_manuelle`
+  ADD PRIMARY KEY (`Code-Lateralite`),
+  ADD KEY `Code-Lateralite` (`Code-Lateralite`);
+
+--
+-- Index pour la table `tab_codage_nom_lentilles`
+--
+ALTER TABLE `tab_codage_nom_lentilles`
+  ADD PRIMARY KEY (`Id_lentille`),
+  ADD KEY `Num_auto1` (`Id_lentille`);
+
+--
+-- Index pour la table `tab_codage_parente`
+--
+ALTER TABLE `tab_codage_parente`
+  ADD PRIMARY KEY (`Code`);
+
+--
+-- Index pour la table `tab_codage_suivi`
+--
+ALTER TABLE `tab_codage_suivi`
+  ADD PRIMARY KEY (`ID_CS_Suivi`);
+
+--
+-- Index pour la table `tab_codage_type_consultation`
+--
+ALTER TABLE `tab_codage_type_consultation`
+  ADD PRIMARY KEY (`Codage`);
+
+--
+-- Index pour la table `tab_contacto`
+--
+ALTER TABLE `tab_contacto`
+  ADD PRIMARY KEY (`N° dossier`,`Date`,`Œil`),
+  ADD KEY `N° dossier` (`N° dossier`),
+  ADD KEY `TAB_Nom_lentillesTAB_contacto` (`Id_lentille`);
+
+--
+-- Index pour la table `tab_grossesse`
+--
+ALTER TABLE `tab_grossesse`
+  ADD PRIMARY KEY (`Num_Dossier`,`Id-Grossesse`),
+  ADD KEY `Num_Dossier` (`Num_Dossier`);
+
+--
+-- Index pour la table `tab_patient`
+--
+ALTER TABLE `tab_patient`
+  ADD PRIMARY KEY (`Num_dossier`),
+  ADD KEY `TAB_Codage_adressageTAB_patient` (`Adressage`),
+  ADD KEY `TAB_Codage_CSPTAB_patient` (`CSP`),
+  ADD KEY `TAB_Codage_EthnieTAB_patient` (`Ethnie`),
+  ADD KEY `TAB_Codage_Lateralite_manuelleTAB_patient` (`Lat_man`),
+  ADD KEY `TAB_Codage_Type_ConsultationTAB_patient` (`Typ_consul`);
+
+--
+-- Index pour la table `tab_suivi`
+--
+ALTER TABLE `tab_suivi`
+  ADD PRIMARY KEY (`ID_suivi`),
+  ADD KEY `N° dossier` (`N° dossier`),
+  ADD KEY `TAB_Codage_Adaptation_ContactoTAB_Suivi` (`Adaptation_lentille`),
+  ADD KEY `TAB_Codage_Frottement_oculaireTAB_Suivi` (`Frottement_yeux`),
+  ADD KEY `TAB_Codage_SuiviTAB_Suivi` (`Type_consult`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `tab_atcdperso`
+--
+ALTER TABLE `tab_atcdperso`
+  MODIFY `ID_ATCD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=944;
+--
+-- AUTO_INCREMENT pour la table `tab_atcd_famil`
+--
+ALTER TABLE `tab_atcd_famil`
+  MODIFY `Id_ATCD fam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
+--
+-- AUTO_INCREMENT pour la table `tab_chirurgie`
+--
+ALTER TABLE `tab_chirurgie`
+  MODIFY `ID_Chirurgie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=610;
+--
+-- AUTO_INCREMENT pour la table `tab_codage_atcd`
+--
+ALTER TABLE `tab_codage_atcd`
+  MODIFY `Num_atcd` double NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT pour la table `tab_codage_nom_lentilles`
+--
+ALTER TABLE `tab_codage_nom_lentilles`
+  MODIFY `Id_lentille` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+--
+-- AUTO_INCREMENT pour la table `tab_suivi`
+--
+ALTER TABLE `tab_suivi`
+  MODIFY `ID_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2154;
 --
 -- Contraintes pour les tables déchargées
 --
