@@ -1,5 +1,6 @@
 
 <?php include "model/debutpage.php";
+
 // Vérifier si le formulaire a été soumis
 if (isset($_POST['redirect'])) {
     // Rediriger l'utilisateur vers la page sélectionnée
@@ -23,7 +24,7 @@ if (isset($_POST['redirect'])) {
             gap: 20px; /* Espacement entre les éléments */
         }
     </style>
-</head>
+
 
 <body>
 <?php include "model/navbar.php"; ?>
@@ -44,4 +45,3 @@ if (isset($_POST['redirect'])) {
 <?php include "model/footer.php"; ?>
 
 </body>
-</html>

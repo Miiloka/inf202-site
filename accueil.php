@@ -4,8 +4,6 @@
 <link href="ressources/css/css_accueil.css" rel="stylesheet"/>
 
 
-  <title>Accueil</title>
-  </head>
 
   <body>
 

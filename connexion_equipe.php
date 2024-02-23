@@ -1,8 +1,5 @@
 <?php include "model/debutpage.php"; ?>
 
-<title>Connexion équipe</title>
-
-</head>
 
 <body>
 
@@ -18,7 +15,7 @@ $req = $pdo->prepare('select mdp from tab_equipe_service where user= :p_user');
 // exécution de la requête 
 $req->execute(array('p_user' => $_POST['utilisateur']));
 
-// Récupération des
+// Récupération des résultats
 $ligne = $req->fetch();
 
 if ($ligne)  

@@ -1,9 +1,6 @@
 
 <?php include "model/debutpage.php"; ?>
 
-<title>Formulaire suppression patient</title>
-
-</head>
 
 <body>
 
@@ -14,10 +11,7 @@
 include("connexion_base.php"); ?>
 
 <html>
-	<head>
-		<meta charset="utf-8" />	
-		<title>Identification</title>
-</head>
+
 <body>
 
 <br />

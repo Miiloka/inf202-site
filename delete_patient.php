@@ -1,7 +1,6 @@
 
 <?php include "model/debutpage.php"; ?>
 
-<title>Connexion equipe</title>
 
 <body>
 <?php include "model/navbar.php"; ?>
