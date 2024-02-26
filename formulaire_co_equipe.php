@@ -8,14 +8,6 @@
 <?php include "model/navbar.php"; ?>
 
 <style>
-    body {
-        font-family: Roboto;
-        background-color: #f4f4f4;
-        justify-content: center;
-        height: 10px;
-        font-size: 13px;
-    }
-
     .form-co {
         border: 2px solid #ccc;
         margin: auto; /* Centrer le formulaire horizontalement */
@@ -51,10 +43,15 @@
         justify-content: center;
         align-items: center;
         height: 100vh; /* Utiliser toute la hauteur de la fenêtre de visualisation */
+        font-family: Roboto;
+        background-color: #f4f4f4;
+        justify-content: center;
+        height: 10px;
+        font-size: 13px;
     }
 </style>
 
-<div class="container-form">
+<div class="container-form" style="background-color: rgba(244, 244, 244, 0.0);">
     <form class="form-co" method="POST" action="connexion_equipe.php">
         <fieldset>
             <legend><h4> Espace professionnels de santé </h4></legend>
