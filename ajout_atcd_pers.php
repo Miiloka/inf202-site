@@ -26,10 +26,10 @@ include("connexion_base.php");
     ));
  // Vérification du succès de l'opération
     if ($req) {
-        echo "Antécédant ajouté avec succès.";
+        echo "Antécédent ajouté avec succès.";
     } 
     else {
-        echo "Erreur lors de l'ajout de l'antécédant.";
+        echo "Erreur lors de l'ajout de l'antécédent.";
     }
 
 ?>
