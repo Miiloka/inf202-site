@@ -26,7 +26,7 @@ $req->execute(array('num_user' => $_POST['num_dossier']));
 
 // Affichage des résultats
     while ($ligne = $req->fetch()) {
-        echo "Le patient a eu " . $ligne['nb_atcd'] . " antécédant(s) de catégorie " . $ligne['Categorie_atcd'] . "</br>";
+        echo "Le patient a eu " . $ligne['nb_atcd'] . " antécédEnt(s) de catégorie " . $ligne['Categorie_atcd'] . "</br>";
     }
 ?>
 </body>
