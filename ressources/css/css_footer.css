@@ -9,15 +9,15 @@
 .container-fluid-footer
 {
   padding-bottom: 20px;
+  align-self: auto;
 }
 
-footer {
-    color: grey;
-    margin-top: auto;
-    width: 100%;
-    position:fixed;
-    bottom: 0;
+footer
+{
+  color: grey;
+  margin-top: auto;
 }
+
 footer p, a
 {
   font-size: 12px;
@@ -53,7 +53,7 @@ footer h6:after
   line-height: 47px;
 }
 
-.btn-footer:hover
+.btn-footer:hoverf
 {
   text-decoration: none;
 }
