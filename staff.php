@@ -25,7 +25,7 @@
 
     <div class="col-md-3"> <!-- Deuxième colonne -->
       <div class="card">
-        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE2.jfif" alt="Maud Perpère" style="width:75%"></p>
+        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Maud Perpère" style="width:75%"></p>
         <div class="container">
           <h2>Maud Perpère</h2>
           <p class="title">Cheffe de service</p>
@@ -38,7 +38,7 @@
 
     <div class="col-md-3"> <!-- Troisième colonne -->
       <div class="card">
-        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE3.jfif" alt="Léa Pasquet" style="width:75%"></p>
+        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Léa Pasquet" style="width:75%"></p>
         <div class="container">
           <h2>Léa Pasquet</h2>
           <p class="title">Ophtalmologue</p>
@@ -51,7 +51,7 @@
 
     <div class="col-md-3"> <!-- Quatrième colonne, ajoutée correctement dans la rangée -->
       <div class="card">
-        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/TPDNE3.jfif" alt="Anne-Andrée" style="width:75%"></p>
+        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Anne-Andrée" style="width:75%"></p>
         <div class="container">
           <h2>Anne-Andrée</h2>
           <p class="title">Ophtalmologue</p>
