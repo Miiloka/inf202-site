@@ -33,7 +33,7 @@ if (isset($_POST['redirect'])) {
     <h2>Choisissez une option</h2> <!-- Titre au-dessus du formulaire -->
     <form class = "formusite" action="" method="post">
         <select name="pageSelectionnee">
-            <option value="fct.php">Nom et prénom par fonction</option>
+            <option value="fct_service.php">Nom et prénom des employés par fonction</option>
             <option value="sel_pat_chir.php">Nombre de patients par type de chirurgie</option>
         </select>
         <button type="submit" name="redirect">Aller à la page</button>

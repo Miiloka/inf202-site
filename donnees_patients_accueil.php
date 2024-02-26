@@ -36,6 +36,7 @@ if (isset($_POST['redirect'])) {
             <option value="ajout_pat_form.php">Ajouter un patient au service</option>
             <option value="delete_patient_form.php">Supprimer un patient du service</option>
 			<option value="chercher_ajout_atcd.php">Chercher ou ajouter un antécédent à un patient</option>
+            <option value="ajout_naissance.php">Ajouter une nouvelle naissance</option>
 			
         </select>
         <button type="submit" name="redirect">Accéder à la fonctionnalité</button>

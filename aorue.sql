@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 11:06 AM
+-- Generation Time: Feb 26, 2024 at 04:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -2664,17 +2664,17 @@ CREATE TABLE `tab_equipe_service` (
 --
 
 INSERT INTO `tab_equipe_service` (`nom`, `prenom`, `user`, `mdp`, `fonction`) VALUES
-('orue', 'adrien', 'aorue', 'aorue33.', 'recruteur'),
-('pasquet', 'lea', 'lpasquet', 'lpasquet15.', 'ophtalmologue'),
-('ruiz', 'anne-andree', 'aruiz', 'aruiz22.', 'ophtalmologue'),
-('perpere', 'maud', 'mperpere', 'mperpere18.', 'cheffe de service'),
-('Dubois', 'Philippe', 'pdubois', 'pdubois29.', 'Assistant Ophtalmologique'),
-('Moreau', 'Nicolas', 'nmoreau', 'nmoreau41.', 'Assistant Ophtalmologique'),
-('Lefevre', 'Mathilde', 'mlefevre', 'mlefevre07.', 'Assistant Ophtalmologique'),
-('Durand', 'Sophie', 'sdurand', 'sdurand62.', 'Personnel d\'Entretien'),
-('Leclerc', 'Pierre', 'pleclerc', 'pleclerc94.', 'Personnel d\'Entretien'),
-('Garnier', 'Julie', 'jgarnier', 'jgarnier20.', 'Personnel d\'Entretien'),
-('Laurent', 'Manon', 'mlaurent', 'mlaurent52.', 'Responsable des Ressources Humaines');
+('Orue', 'Adrien', 'aorue', 'aorue33.', 'Recruteur'),
+('Pasquet', 'Lea', 'lpasquet', 'lpasquet15.', 'Ophtalmologue'),
+('Ruiz', 'Anne-andree', 'aruiz', 'aruiz22.', 'Ophtalmologue'),
+('Perpere', 'Maud', 'mperpere', 'mperpere18.', 'Cheffe de service'),
+('Dubois', 'Philippe', 'pdubois', 'pdubois29.', 'Assistant ophtalmologique'),
+('Moreau', 'Nicolas', 'nmoreau', 'nmoreau41.', 'Assistant ophtalmologique'),
+('Lefevre', 'Mathilde', 'mlefevre', 'mlefevre07.', 'Assistant ophtalmologique'),
+('Durand', 'Sophie', 'sdurand', 'sdurand62.', 'Personnel d\'entretien'),
+('Leclerc', 'Pierre', 'pleclerc', 'pleclerc94.', 'Personnel d\'entretien'),
+('Garnier', 'Julie', 'jgarnier', 'jgarnier20.', 'Personnel d\'entretien'),
+('Laurent', 'Manon', 'mlaurent', 'mlaurent52.', 'Responsable des ressources humaines');
 
 -- --------------------------------------------------------
 

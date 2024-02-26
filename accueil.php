@@ -1,13 +1,11 @@
-  <!-- Pour utiliser le CSS Bootstrap -->
 <!-- Codé par le groupe -->
 <?php include "model/debutpage.php"; ?>
 <link href="ressources/css/css_accueil.css" rel="stylesheet"/>
 
-
-
-  <body>
+  <body style="overflow-x: hidden;">
 
 <?php include "model/navbar.php"; ?>
+
 
 <!-- Description complète du site -->
 <div>
@@ -16,19 +14,19 @@
 <p>Le service d'ophtalmologie est spécialisé dans la prise en charge des kératocônes.</p>
 
 <div class="row" style="padding:10px;">
-  <div class="column">
+  <div class="column" style="display: flex; flex-direction: column; justify-content: center;">
     <h1 style="font-size : 30px">Centre référence du kératocône</h1>
     <p>Le kératocône est une maladie de l'œil qui affecte la forme et l'épaisseur de la cornée, la partie transparente à l'avant de l'œil. Normalement, la cornée a une forme arrondie, agissant comme une lentille pour diriger la lumière vers la rétine. Cependant, dans le cas du kératocône, la cornée s'amincit progressivement et prend une forme conique irrégulière, ce qui provoque une déformation de la vision.</p>
     <h5>Caractéristiques</h5> 
-<ol>
-<li>Amincissement de la cornée</li>
-<li>Déformation de la cornée</li>
-<li>Astigmatisme</li> 
-<li>Troubles visuels</li> 
-</ol>
-</div>
-  <div class="column_img">
-    <img src="ressources/images/eye.jpg" alt="Yeux" style="width: 70%; display: block; margin: 0 auto;">
+    <ol>
+      <li>Amincissement de la cornée</li>
+      <li>Déformation de la cornée</li>
+      <li>Astigmatisme</li> 
+      <li>Troubles visuels</li> 
+    </ol>
+  </div>
+  <div class="column_img" style="display: flex; justify-content: center;">
+    <img src="ressources/images/eye.jpg" alt="Yeux" style="transform:scale(0.5);"/>
   </div>
 </div>
 
@@ -40,5 +38,4 @@
 
 <?php include "model/footer.php"; ?>
 
-</body>
 </html>

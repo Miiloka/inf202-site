@@ -29,3 +29,6 @@
     </div>
   </nav>
 </header>
+
+<!-- Rajouter un espace entre la navbar et le body -->
+<div class="container-fluid" style="height: 50px;"></div>
