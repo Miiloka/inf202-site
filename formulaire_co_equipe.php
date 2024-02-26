@@ -1,4 +1,5 @@
-<!-- Pour utiliser le CSS Bootstrap -->
+<!-- Codé par Léa -->
+
 
 <?php include "model/debutpage.php"; ?>
 
