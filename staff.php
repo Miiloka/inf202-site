@@ -12,11 +12,11 @@
   <div class="row"> <!-- Début de la ligne pour les 4 colonnes -->
     <div class="col-md-3"> <!-- Première colonne -->
       <div class="card">
-        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/adrien.jpeg" alt="Adrien" style="width:50%"></p>
+        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/adrien.jpeg" alt="Adrien Orue" style="width:50%"></p>
         <div class="container">
           <h2>Adrien Orué</h2>
           <p class="title">Chasseur de têtes</p>
-          <p>Chargé du recrutement de talents parmi les meilleurs chirurgiens optiques.</p>
+          <p>Chargé du recrutement de talents parmi les meilleurs chirurgiens optiques. Initialement issu d'une formation d'ophtalmologie. </p>
           <p>adrienorue@gmail.com</p>
           <p><a href="mailto:adrienorue@gmail.com"><button class="button">Contact</button></a></p>
         </div>
@@ -51,7 +51,7 @@
 
     <div class="col-md-3"> <!-- Quatrième colonne, ajoutée correctement dans la rangée -->
       <div class="card">
-        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Anne-Andrée" style="width:75%"></p>
+        <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Anne-Andrée Ruiz" style="width:75%"></p>
         <div class="container">
           <h2>Anne-Andrée</h2>
           <p class="title">Ophtalmologue</p>
