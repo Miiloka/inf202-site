@@ -1,3 +1,4 @@
+<!-- Codé par le groupe -->
 <?php
 // définition des paramètres de connexion à la base de données
 $config_base['hote']        = "localhost";
