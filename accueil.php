@@ -1,5 +1,5 @@
   <!-- Pour utiliser le CSS Bootstrap -->
-
+<!-- Codé par le groupe -->
 <?php include "model/debutpage.php"; ?>
 <link href="ressources/css/css_accueil.css" rel="stylesheet"/>
 

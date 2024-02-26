@@ -1,3 +1,4 @@
+<!-- Codé par le groupe -->
 <?php include "model/debutpage.php"; ?>
 <link href="ressources/css/css_staff.css" rel="stylesheet" type="text/css" />
 <title>L'équipe d'OPH Institute</title>
