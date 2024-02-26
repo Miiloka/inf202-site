@@ -1,3 +1,4 @@
+<!-- Codé par Maud -->
 <?php include "model/debutpage.php"; ?>
 
 <title>Chercher et ajout patient</title>

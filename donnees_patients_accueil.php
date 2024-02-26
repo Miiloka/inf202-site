@@ -1,4 +1,4 @@
-
+<!-- Codé par le groupe -->
 <?php include "model/debutpage.php";
 
 // Vérifier si le formulaire a été soumis
