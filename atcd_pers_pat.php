@@ -19,13 +19,15 @@
 include("connexion_base.php");
 
 // définition de la requête 
-$req = $pdo->prepare('select Categorie_atcd, count(Categorie_atcd) as nb_atcd from tab_atcdperso  where Num_dossier = :num_user group by Categorie_atcd');
+$req = $pdo->prepare('SELECT Categorie_atcd, COUNT(Categorie_atcd) as nb_atcd FROM tab_atcdperso WHERE Num_dossier = :num_user GROUP BY Categorie_atcd');
+
 // exécution de la requête 
 $req->execute(array('num_user' => $_POST['num_dossier']));
 
-// Récupération des
-
-echo "Le patient ".$num_user, "a eu des antécédants de catégorie " .$Categorie_atcd ;
+// Affichage des résultats
+    while ($ligne = $req->fetch()) {
+        echo "Le patient a eu " . $ligne['nb_atcd'] . " antécédant(s) de catégorie " . $ligne['Categorie_atcd'] . "</br>";
+    }
 ?>
 </body>
 
