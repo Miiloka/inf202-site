@@ -28,10 +28,5 @@
 </br>
 
 
-<form method ="POST" action="sel_pat_chir.php">
-<h4> Sélectionner un patient selon le type de chirurgie </h4>
-<input type="submit" name="chir" value ="Sélection des patients selon le type de chirurgie"/>
-</form>
-
 <?php include "model/footer.php"; ?>
 </body>
