@@ -5,7 +5,7 @@ $message = '';
 $script = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include "model/debutpage.php"; // Assurez-vous que cette inclusion initialise la connexion à la base de données avec $pdo
+    include "model/debutpage.php";
     $num_dossier = $_POST["num_dossier"];
     $annee_naissance = $_POST["annee_naissance"];
     $currentYear = date("Y");
@@ -18,11 +18,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "<div class='error'>Erreur : L'année de naissance ne peut pas dépasser l'année actuelle.</div>";
         $script = "var seconds = 5; countdown();";
     } else {
-        // Ici, placez votre logique pour vérifier l'existence du numéro de dossier, et l'insertion de la nouvelle naissance
-        // Si tout se passe bien
-        $message = "<div class='success'>Naissance ajoutée avec succès pour le dossier $num_dossier.</div>";
-        $script = "var seconds = 5; countdownSuccess();";
-        // En cas d'erreur dans cette logique, ajustez $message et $script comme ci-dessus
+        // Vérifier si le numéro de dossier existe
+        $patientStmt = $pdo->prepare("SELECT 1 FROM tab_patient WHERE Num_Dossier = :num_dossier");
+        $patientStmt->execute(['num_dossier' => $num_dossier]);
+        if ($patientStmt->fetchColumn()) {
+            try {
+                $pdo->beginTransaction();
+
+                $stmt = $pdo->prepare("SELECT MAX(Id_Grossesse) AS max_id FROM tab_grossesse WHERE Num_Dossier = :num_dossier");
+                $stmt->execute(['num_dossier' => $num_dossier]);
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $id_grossesse = $result ? $result['max_id'] + 1 : 1;
+
+                $insertStmt = $pdo->prepare("INSERT INTO tab_grossesse (Num_Dossier, Id_Grossesse, Annee) VALUES (:num_dossier, :id_grossesse, :annee_naissance)");
+                $insertStmt->execute(['num_dossier' => $num_dossier, 'id_grossesse' => $id_grossesse, 'annee_naissance' => $annee_naissance]);
+
+                $pdo->commit();
+                $message = "<div class='success'>Naissance ajoutée avec succès pour le dossier $num_dossier.</div>";
+                $script = "var seconds = 5; countdownSuccess();";
+            } catch (Exception $e) {
+                $pdo->rollBack();
+                $message = "<div class='error'>" . $e->getMessage() . "</div>";
+                $script = "var seconds = 5; countdown();";
+            }
+        } else {
+            $message = "<div class='error'>Erreur : Numéro de dossier non trouvé dans la table des patients.</div>";
+            $script = "var seconds = 5; countdown();";
+        }
     }
 } else {
     header("Location: ajout_naissance.php");
@@ -116,4 +138,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?= $script ?>
     </script>
 
+</div>
 <?php include "model/footer.php"; ?>
