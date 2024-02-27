@@ -86,10 +86,6 @@
     
 </div>
 
-
-<button onclick="window.location.href='donnees_service.php'" class="btn btn-primary">Retour</button>
-
-
 <?php include "model/footer.php"; ?>
 
 </body>
