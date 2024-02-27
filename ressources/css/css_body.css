@@ -1,15 +1,15 @@
 /* ############################ CSS POUR LE BODY ############################ */
 
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgba(231, 229, 229, 0.80);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 p {
   padding: 1em;
   text-align: justify;
-}
-
-body
-{
-  background: rgba(231, 229, 229, 0.733);
-  min-height: 100vh;
-  display: flex;
-  flex-direction:column;
-  margin:0;
 }
