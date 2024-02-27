@@ -11,7 +11,7 @@
     .form-co {
         border: 2px solid #ccc;
         margin: auto; /* Centrer le formulaire horizontalement */
-        padding: 10px;
+        padding: 15px;
         border-radius: 8px;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -42,11 +42,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Utiliser toute la hauteur de la fenêtre de visualisation */
+        height: 35vh; /* Utiliser toute la hauteur de la fenêtre de visualisation */
         font-family: Roboto;
         background-color: #f4f4f4;
         justify-content: center;
-        height: 10px;
+        
         font-size: 13px;
     }
 </style>
@@ -64,10 +64,10 @@
                 </tr>
             </table>
             <input class="input-co" type="submit" name="bt1" value="Accéder à mon compte"/> <br />
-        </fieldset> <br/>
+        </fieldset> 
     </form>
 </div>
-
+<br/>
 </body>
 
 <?php include "model/footer.php"; ?>
