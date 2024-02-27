@@ -54,10 +54,10 @@
       <div class="card">
         <p style="text-align:center; padding-top: 10px"><img src="ressources/images/ophtalmo.jpg" alt="Anne-Andrée Ruiz" style="width:75%"></p>
         <div class="container">
-          <h2>Anne-Andrée</h2>
+          <h2>Anne-Andrée Ruiz</h2>
           <p class="title">Ophtalmologue</p>
           <p>Ophtalmologue depuis 12 ans. Spécialisée dans le traitement des maladies oculaires telles que la cataracte, le glaucome et la dégénérescence maculaire.</p>
-          <p>anneandree@gmail.com</p>
+          <p>anneandree.ruiz@gmail.com</p>
           <p><a href="mailto:anneandree@gmail.com"><button class="button">Contact</button></a></p>
         </div>
       </div>

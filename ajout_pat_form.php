@@ -14,9 +14,14 @@
 <input name ="prenom" type="text"/></label>
 <label> Numéro :
 <input name ="num" type="text"/></label>
+<label> Sexe :
+<select name="sexe">
+<option value="1">Homme</option>
+<option value="2">Femme</option>
+</select>
+</label>
 </fieldset>
 <input type="submit" name="val" value ="Valider"/>
-
 </form>
 
 <?php include "model/footer.php"; ?>

@@ -12,8 +12,8 @@
 <?php
 include("connexion_base.php");
 
-$req = $pdo->prepare("INSERT INTO tab_patient (Num_dossier, Date_debut_suivi , Nom, Pren) VALUES (:p_num,CURRENT_TIMESTAMP,:p_nom,:p_pren)");
-$req->execute(array('p_pren' => $_POST['prenom'] , 'p_nom' => $_POST['nom'] , 'p_num' => $_POST['num']));
+$req = $pdo->prepare("INSERT INTO tab_patient (Num_dossier, Date_debut_suivi , Nom, Pren, Sexe) VALUES (:p_num,CURRENT_TIMESTAMP,:p_nom,:p_pren,:p_sexe)");
+$req->execute(array('p_pren' => $_POST['prenom'] , 'p_nom' => $_POST['nom'] , 'p_num' => $_POST['num'], 'p_sexe' => $_POST['sexe']));
 
 
 if ($req) 	{	echo "Le patient ".htmlspecialchars($_POST['prenom'])." ".htmlspecialchars($_POST['nom'])." a bien été ajouté.";
